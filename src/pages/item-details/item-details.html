@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{selectedItem.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <img src="../../assets/imgs/{{selectedItem.name}}.jpg" width="100%"  (click)="openBrowser()">
+  <h4 text-center *ngIf="selectedItem">
+    {{selectedItem.info}}
+  </h4>
+</ion-content>
